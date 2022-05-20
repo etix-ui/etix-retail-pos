@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Chip,
   Dialog,
@@ -18,6 +19,7 @@ import { TransitionProps } from "@mui/material/transitions"
 import Typography from "@mui/material/Typography"
 import * as React from "react"
 import { Product } from "./SellPage"
+import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported"
 
 interface Props {
   product: Product
@@ -50,7 +52,25 @@ export function ProductCard(props: Props) {
   return (
     <>
       <Card sx={{ maxWidth: 345 }} onClick={handleClickOpen}>
-        <CardMedia component="img" height="140" image={props.product.image} alt="{props.product.name}" />
+        {props.product.image !== "" ? (
+          <CardMedia component="img" height="140" image={props.product.image} alt="{props.product.name}" />
+        ) : (
+          <Box
+            sx={{
+              backgroundColor: "#e7e8e9",
+              minHeight: "140px",
+              display: "flex",
+              flexDirection: "column",
+              verticalAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "#999",
+            }}
+          >
+            <ImageNotSupportedIcon sx={{ fontSize: "60px" }} />
+            <Typography variant="h6">No Image Found</Typography>
+          </Box>
+        )}
         <CardContent style={{ minHeight: "105px" }}>
           <Typography gutterBottom variant="h6" component="div">
             {props.product.name}
@@ -100,7 +120,7 @@ export function ProductCard(props: Props) {
                 </Button>
               )
             })}
-            <pre>{JSON.stringify(selectedVariations, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(selectedVariations, null, 2)}</pre> */}
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{ justifyContent: "space-between" }}>
