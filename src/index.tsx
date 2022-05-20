@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { HashRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { OrderHistoryPage } from "./prototypeDesign/OrderHistoryPage"
 import { SellPage } from "./prototypeDesign/SellPage"
 import { SettingsPage } from "./prototypeDesign/SettingsPage"
@@ -9,13 +9,13 @@ import reportWebVitals from "./reportWebVitals"
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <>
-    <HashRouter>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/" component={SellPage} />
         <Route exact path="/orderHistory" component={OrderHistoryPage} />
         <Route exact path="/settings" component={SettingsPage} />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   </>
 )
 
