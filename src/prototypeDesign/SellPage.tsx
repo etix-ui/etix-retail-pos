@@ -32,6 +32,18 @@ import burgerSrc from "./images/burger.jpg"
 import cornSrc from "./images/corn.png"
 // @ts-ignore
 import hotdogSrc from "./images/hotdog.jpg"
+// @ts-ignore
+import grilledcheeseSrc from "./images/grilledcheese.jpeg"
+// @ts-ignore
+import pabstSrc from "./images/pabst.jpeg"
+// @ts-ignore
+import pizzaSrc from "./images/pizza.jpeg"
+// @ts-ignore
+import snickersSrc from "./images/snickers.webp"
+// @ts-ignore
+import shrimpSrc from "./images/shrimp.jpeg"
+// @ts-ignore
+import chickentendersSrc from "./images/chickentenders.webp"
 import { ProductCard } from "./ProductCard"
 import { Template } from "./Template"
 
@@ -135,7 +147,7 @@ const products: Product[] = [
     categoryId: 2,
     name: "Mushroom and Pepperoni Pizza Slice",
     price: "$9.99",
-    image: "",
+    image: pizzaSrc,
     variations: [
       { name: "Pepperoni", selectedByDefault: true },
       { name: "Mushroom", selectedByDefault: true },
@@ -148,7 +160,7 @@ const products: Product[] = [
     categoryId: 2,
     name: "Shrimp Cocktail",
     price: "$9.99",
-    image: "",
+    image: shrimpSrc,
     variations: [],
   },
   {
@@ -156,7 +168,7 @@ const products: Product[] = [
     categoryId: 2,
     name: "Fried Snickers",
     price: "$9.99",
-    image: "",
+    image: snickersSrc,
     variations: [],
   },
   {
@@ -164,7 +176,7 @@ const products: Product[] = [
     categoryId: 2,
     name: "Grilled Cheese",
     price: "$9.99",
-    image: "",
+    image: grilledcheeseSrc,
     variations: [],
   },
   {
@@ -172,7 +184,7 @@ const products: Product[] = [
     categoryId: 2,
     name: "Chicken Tenders",
     price: "$9.99",
-    image: "",
+    image: chickentendersSrc,
     variations: [{ name: "4 Pieces" }, { name: "6 Pieces" }],
   },
   {
@@ -290,7 +302,7 @@ const products: Product[] = [
     categoryId: 5,
     name: "Pabst Blue Ribbon",
     price: "$9.99",
-    image: "",
+    image: pabstSrc,
     variations: [{ name: "16 oz." }, { name: "24 oz." }, { name: "32 oz." }],
   },
   {
@@ -402,7 +414,7 @@ const products: Product[] = [
     categoryId: 8,
     name: "Pizza Slice",
     price: "$9.99",
-    image: "",
+    image: pizzaSrc,
     variations: [],
   },
   {
